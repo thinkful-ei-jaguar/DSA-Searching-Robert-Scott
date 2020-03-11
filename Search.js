@@ -217,7 +217,7 @@ function main2() {
   tree2.postorder();
 }
 
-main2();
+//main2();
 
 
 //algo for preorder 
@@ -234,7 +234,21 @@ const array = [];
 // }
 
 // nextOfficer();
+            // m   t   w   th    f    s   sun
+const share =[128, 97, 121, 123, 98, 97, 105]
 
+function maxProfit(shares){
+    let maxprofit=0;
+    for(let i=0;i<share.length;i++){
+        let a=share[i]-shares[i+1]
+        if(a<maxprofit && a<0){
+            maxprofit=a;
+        }
+    }
+    return maxprofit * -1;
+}
 
-
-
+function main3(){
+    console.log(maxProfit(share))
+}
+main3()
