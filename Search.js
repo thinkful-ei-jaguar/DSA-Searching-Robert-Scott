@@ -107,27 +107,27 @@ class BinarySearchTree{
         this.left.postorder();
     }
     if(this.right){
-        this.right.postorder
+        this.right.postorder();
     }
         console.log(this.key)
     }
     inorder(){
         if(this.left){
-        this.left.postorder();
+        this.left.inorder();
         }
         console.log(this.key)
         if(this.right){
-            this.right.postorder
+            this.right.inorder();
         }
        
     }
     preorder(){
         console.log(this.key)
         if(this.left){
-        this.left.postorder();
+        this.left.preorder();
         }
         if(this.right){
-            this.right.postorder
+            this.right.preorder();
         }
        
     }
@@ -177,7 +177,7 @@ const list7=[8,6,5,7,10,9,11]//preorder
 
 
 
-
+//##5
 
 function main(){
 const tree= new BinarySearchTree();
@@ -196,11 +196,14 @@ tree.insert(44);
 tree.insert(66);
 tree.insert(90);
 tree.insert(22);
+console.log("preorder")
 tree.preorder();
+console.log("postorder")
 tree.postorder();
+console.log("inorder")
 tree.inorder();
-
 }
-
-
 main();
+//##6
+
+
